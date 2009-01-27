@@ -18,10 +18,10 @@
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(returnToParent)];
         self.delegate = aDelegate;
         self.title = NSLocalizedString(@"Recents", nil);
-        self.tableView.rowHeight = 80.0f;
+        self.tableView.rowHeight = 85.0f;
         
         TPRecent *rec = [[TPRecent alloc] init];
-        //recents = [[rec recents] retain];
+        recents = [[rec recents] retain];
     }
     
     return self;
@@ -93,7 +93,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [recents count];
 }
 
 
@@ -102,11 +102,12 @@
     
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    TPRecentCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[TPRecentCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
     }
     
+    cell.trip = [recents objectAtIndex:indexPath.row];
     // Set up the cell...
 
     return cell;

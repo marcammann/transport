@@ -43,7 +43,7 @@
         [self addSubview:to];
         [self addSubview:separtor];
         
-        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        //self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     return self;
 }

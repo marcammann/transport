@@ -53,7 +53,7 @@
         [self addSubview:time];
         [self addSubview:timeTitle];
         
-        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        //self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     return self;
 }
@@ -84,7 +84,7 @@
     }
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    [dateFormatter setDateStyle:NSDateFormatterLongStyle];
     [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
     time.text = [dateFormatter stringFromDate:trip.travelDate];
     

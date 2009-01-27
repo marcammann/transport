@@ -7,26 +7,6 @@ CREATE TABLE gg_place (
 	place_type TEXT /* enum: currentlocation, poi, station, address */
 );
 
-SELECT f.favorite_name, f.favorite_id, 
-fr.place_id as from_id, 
-fr.place_name as from_name, 
-fr.place_coordinate_lat as from_coord_lat, 
-fr.place_coordinate_lon as from_coord_lon, 
-fr.place_count as from_count, 
-fr.place_type as from_type, 
-tf.place_id as to_id,   
-tf.place_name as to_name,
-tf.place_coordinate_lat as to_coord_lat,   
-tf.place_coordinate_lon as to_coord_lon,   
-tf.place_count as to_count,   
-tf.place_type as to_type
-FROM gg_favorite f 
-LEFT JOIN gg_place fr ON (fr.place_id = f.from_id) 
-LEFT JOIN gg_place tf ON (tf.place_id = f.to_id)
-ORDER BY favorite_name ASC
-
-
-
 CREATE TABLE gg_favorite (
 	favorite_id INTEGER PRIMARY KEY,
 	from_id INTEGER,
