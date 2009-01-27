@@ -1,15 +1,15 @@
 //
-//  TPFavoriteTableController.m
+//  TPRecentTableController.m
 //  ZVVTransport
 //
 //  Created by Marc Ammann on 1/27/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "TPFavoriteTableController.h"
+#import "TPRecentTableController.h"
 
 
-@implementation TPFavoriteTableController
+@implementation TPRecentTableController
 
 @synthesize delegate;
 
@@ -17,21 +17,18 @@
     if (self = [super initWithStyle:UITableViewStylePlain]) {
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(returnToParent)];
         self.delegate = aDelegate;
-        self.title = NSLocalizedString(@"Favorites", nil);
-        self.tableView.rowHeight = 60.0f;
+        self.title = NSLocalizedString(@"Recents", nil);
+        self.tableView.rowHeight = 80.0f;
         
-        TPFavorite *fav = [[TPFavorite alloc] init];
-        favorites = [[fav favorites] retain];
+        TPRecent *rec = [[TPRecent alloc] init];
+        //recents = [[rec recents] retain];
     }
-    
-
     
     return self;
 }
-
 - (void)returnToParent {
     if (delegate) {
-        [delegate favoritesControllerDidCancel:self];
+        [delegate recentsControllerDidCancel:self];
     }
 }
 
@@ -96,7 +93,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [favorites count];
+    return 0;
 }
 
 
@@ -105,13 +102,10 @@
     
     static NSString *CellIdentifier = @"Cell";
     
-    TPFavoriteCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[TPFavoriteCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
     }
-
-    TPFavoriteTrip *currentTrip = [favorites objectAtIndex:indexPath.row];
-    cell.trip = currentTrip;
     
     // Set up the cell...
 
@@ -125,9 +119,8 @@
 	// [self.navigationController pushViewController:anotherViewController];
 	// [anotherViewController release];
     if (delegate) {
-        [delegate favoritesController:self didSelectTrip:[favorites objectAtIndex:indexPath.row]];
+        [delegate recentsController:self didSelectTrip:[recents objectAtIndex:indexPath.row]];
     }
-    
 }
 
 
@@ -173,7 +166,7 @@
 
 - (void)dealloc {
     [delegate release];
-    [favorites release];
+    [recents release];
     [super dealloc];
 }
 

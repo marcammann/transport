@@ -15,7 +15,7 @@
 #import "TPSettings.h"
 
 @protocol TPSettingsControllerDelegate 
-- (void)settingsControllerIsDone;
+- (void)settingsControllerIsDone:(id)controller;
 @end
 
 

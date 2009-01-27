@@ -19,9 +19,9 @@
         toolbar = [[UIToolbar alloc] init];
         [toolbar sizeToFit];
         toolbar.frame = CGRectMake(toolbar.frame.origin.x, self.view.bounds.size.height - 2*toolbar.frame.size.height, toolbar.frame.size.width, toolbar.frame.size.height);
-        UIBarButtonItem *recentBt = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"toolbarRecent.png"] style:UIBarButtonItemStylePlain target:self action:@selector(showSettingsModal)] autorelease];
+        UIBarButtonItem *recentBt = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"toolbarRecent.png"] style:UIBarButtonItemStylePlain target:self action:@selector(showRecentsModal)] autorelease];
         recentBt.width = 40.0f;
-        UIBarButtonItem *favoriteBt = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"toolbarFavorite.png"] style:UIBarButtonItemStylePlain target:self action:@selector(showSettingsModal)] autorelease];
+        UIBarButtonItem *favoriteBt = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"toolbarFavorite.png"] style:UIBarButtonItemStylePlain target:self action:@selector(showFavoritesModal)] autorelease];
         favoriteBt.width = 40.0f;
         UIBarButtonItem *stationBt = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"toolbarStation.png"] style:UIBarButtonItemStylePlain target:self action:@selector(showSettingsModal)] autorelease];
         stationBt.width = 40.0f;
@@ -41,16 +41,47 @@
     settingsController = [[[TPSettingsController alloc] initWithSettings:settings] autorelease];
     settingsController.delegate = self;
     UINavigationController *settingsNavController = [[UINavigationController alloc] initWithRootViewController:settingsController];
-    settingsNavController.navigationBar.barStyle = UIBarStyleDefault;
-    settingsNavController.title = NSLocalizedString(@"Settings", nil);
     
     [self.navigationController presentModalViewController:settingsNavController animated:YES];
 }
 
-- (void)settingsControllerIsDone {
+- (void)settingsControllerIsDone:(id)controller {
     [self.navigationController dismissModalViewControllerAnimated:YES];
 }
 
+- (void)showFavoritesModal {
+    favoritesController = [[[TPFavoriteTableController alloc] initWithDelegate:self] autorelease];
+    UINavigationController *favoritesNavController = [[UINavigationController alloc] initWithRootViewController:favoritesController];
+
+    
+    [self.navigationController presentModalViewController:favoritesNavController animated:YES];
+}
+
+- (void)favoritesControllerDidCancel:(id)controller {
+    [self.navigationController dismissModalViewControllerAnimated:YES];
+    //[controller release];
+}
+
+- (void)favoritesController:(id)controller didSelectTrip:(TPFavoriteTrip *)trip {
+    [self.navigationController dismissModalViewControllerAnimated:YES];
+    [inputMaskController setCurrentTrip:trip];
+    //[controller release];
+}
+
+- (void)showRecentsModal {
+    recentsController = [[[TPRecentTableController alloc] initWithDelegate:self] autorelease];
+    UINavigationController *recentsNavController = [[UINavigationController alloc]  initWithRootViewController:recentsController];
+    [self.navigationController presentModalViewController:recentsNavController animated:YES];
+}
+
+- (void)recentsControllerDidCancel:(id)controller {
+    [self.navigationController dismissModalViewControllerAnimated:YES];
+}
+
+- (void)recentsController:(id)controller didSelectTrip:(TPRecentTrip *)trip {
+    [self.navigationController dismissModalViewControllerAnimated:YES];
+    [inputMaskController setCurrentTrip:trip];
+}
 
 - (id)initWithFrom:(TPScheduleInput *)from to:(TPScheduleInput *)to date:(NSDate *)travelDate isDeparture:(BOOL)travelDateDeparture {
     if (self = [super init]) {

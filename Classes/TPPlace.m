@@ -89,10 +89,10 @@ sqlite3 *database;
 
 + (TPScheduleInput *)placeFromStatement:(sqlite3_stmt *)stmt {
     TPScheduleInput *place = [[[TPScheduleInput alloc] init] autorelease];
-    place.iid = sqlite3_column_int(stmt, 0);
+    place.inputID = [NSNumber numberWithInt:sqlite3_column_int(stmt, 0)];
     place.stringRepresentation = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 1)];
     place.location = [[CLLocation alloc] initWithLatitude:(CLLocationDegrees)sqlite3_column_double(stmt, 2) longitude:(CLLocationDegrees)sqlite3_column_double(stmt, 3)];
-    place.requestCount = sqlite3_column_int(stmt, 4);
+    place.requestCount = [NSNumber numberWithInt:sqlite3_column_int(stmt, 4)];
     NSString *type = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 5)];
     
     if ([type isEqualToString:@"currentlocation"]) {

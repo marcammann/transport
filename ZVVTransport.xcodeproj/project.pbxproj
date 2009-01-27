@@ -69,6 +69,11 @@
 		4998897B0F2EC24E00672AC4 /* NBInvocationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4998897A0F2EC24E00672AC4 /* NBInvocationQueue.m */; };
 		49988B6B0F2F4A5D00672AC4 /* TPFavoriteTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49988B6A0F2F4A5D00672AC4 /* TPFavoriteTableController.m */; };
 		49988BAD0F2F511B00672AC4 /* TPFavoriteTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 49988BAC0F2F511B00672AC4 /* TPFavoriteTrip.m */; };
+		49988C890F2F68FD00672AC4 /* TPFavoriteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49988C880F2F68FD00672AC4 /* TPFavoriteCell.m */; };
+		49988CEB0F2F712500672AC4 /* favoriteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 49988CEA0F2F712500672AC4 /* favoriteArrow.png */; };
+		49988DA10F2F813000672AC4 /* TPRecentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49988DA00F2F813000672AC4 /* TPRecentCell.m */; };
+		49988DA50F2F81C400672AC4 /* TPRecentTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 49988DA40F2F81C400672AC4 /* TPRecentTrip.m */; };
+		49988DAF0F2F84BD00672AC4 /* TPRecentTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49988DAE0F2F84BD00672AC4 /* TPRecentTableController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +162,15 @@
 		49988B6A0F2F4A5D00672AC4 /* TPFavoriteTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPFavoriteTableController.m; sourceTree = "<group>"; };
 		49988BAB0F2F511B00672AC4 /* TPFavoriteTrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPFavoriteTrip.h; sourceTree = "<group>"; };
 		49988BAC0F2F511B00672AC4 /* TPFavoriteTrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPFavoriteTrip.m; sourceTree = "<group>"; };
+		49988C870F2F68FD00672AC4 /* TPFavoriteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPFavoriteCell.h; sourceTree = "<group>"; };
+		49988C880F2F68FD00672AC4 /* TPFavoriteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPFavoriteCell.m; sourceTree = "<group>"; };
+		49988CEA0F2F712500672AC4 /* favoriteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = favoriteArrow.png; path = images/favoriteArrow.png; sourceTree = "<group>"; };
+		49988D9F0F2F813000672AC4 /* TPRecentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPRecentCell.h; sourceTree = "<group>"; };
+		49988DA00F2F813000672AC4 /* TPRecentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPRecentCell.m; sourceTree = "<group>"; };
+		49988DA30F2F81C400672AC4 /* TPRecentTrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPRecentTrip.h; sourceTree = "<group>"; };
+		49988DA40F2F81C400672AC4 /* TPRecentTrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPRecentTrip.m; sourceTree = "<group>"; };
+		49988DAD0F2F84BD00672AC4 /* TPRecentTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPRecentTableController.h; sourceTree = "<group>"; };
+		49988DAE0F2F84BD00672AC4 /* TPRecentTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPRecentTableController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,8 +264,7 @@
 		49114A820F2C803F0097F9F4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				49114A7F0F2C80370097F9F4 /* TPTrip.h */,
-				49114A800F2C80370097F9F4 /* TPTrip.m */,
+				49988DA20F2F818A00672AC4 /* Trip */,
 				49114A830F2C80AE0097F9F4 /* TPScheduleInput.h */,
 				49114A840F2C80AE0097F9F4 /* TPScheduleInput.m */,
 				49114AA70F2C88690097F9F4 /* TPSettings.h */,
@@ -262,8 +275,6 @@
 				496433970F2D244E00F3348C /* TPFavorite.m */,
 				496433990F2D246000F3348C /* TPPlace.h */,
 				4964339A0F2D246000F3348C /* TPPlace.m */,
-				49988BAB0F2F511B00672AC4 /* TPFavoriteTrip.h */,
-				49988BAC0F2F511B00672AC4 /* TPFavoriteTrip.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -290,6 +301,10 @@
 				496432F10F2D03B900F3348C /* TPTextFieldOverlay.m */,
 				496433520F2D0E4E00F3348C /* TPAutocompleteTableView.h */,
 				496433530F2D0E4E00F3348C /* TPAutocompleteTableView.m */,
+				49988C870F2F68FD00672AC4 /* TPFavoriteCell.h */,
+				49988C880F2F68FD00672AC4 /* TPFavoriteCell.m */,
+				49988D9F0F2F813000672AC4 /* TPRecentCell.h */,
+				49988DA00F2F813000672AC4 /* TPRecentCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -323,6 +338,7 @@
 				4984AE270F2BECF4007DD309 /* Settings */,
 				4984AF440F2BFA19007DD309 /* Schedule */,
 				49988B6C0F2F4A6700672AC4 /* Favorites */,
+				49988DB00F2F84C400672AC4 /* Recent */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -330,6 +346,7 @@
 		4984AF360F2BF8D1007DD309 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				49988CEA0F2F712500672AC4 /* favoriteArrow.png */,
 				4998882C0F2E6DAB00672AC4 /* About */,
 				4998882E0F2E6DB900672AC4 /* Autocomplete */,
 				4998882F0F2E6DC200672AC4 /* Tab Bar */,
@@ -424,6 +441,28 @@
 			name = Favorites;
 			sourceTree = "<group>";
 		};
+		49988DA20F2F818A00672AC4 /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				49114A7F0F2C80370097F9F4 /* TPTrip.h */,
+				49114A800F2C80370097F9F4 /* TPTrip.m */,
+				49988BAB0F2F511B00672AC4 /* TPFavoriteTrip.h */,
+				49988BAC0F2F511B00672AC4 /* TPFavoriteTrip.m */,
+				49988DA30F2F81C400672AC4 /* TPRecentTrip.h */,
+				49988DA40F2F81C400672AC4 /* TPRecentTrip.m */,
+			);
+			name = Trip;
+			sourceTree = "<group>";
+		};
+		49988DB00F2F84C400672AC4 /* Recent */ = {
+			isa = PBXGroup;
+			children = (
+				49988DAD0F2F84BD00672AC4 /* TPRecentTableController.h */,
+				49988DAE0F2F84BD00672AC4 /* TPRecentTableController.m */,
+			);
+			name = Recent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -498,6 +537,7 @@
 				496436130F2D5F1400F3348C /* toolbarRecent.png in Resources */,
 				4964363F0F2D621B00F3348C /* toolbarAdd.png in Resources */,
 				4972B4350F2E63F60070F3A5 /* tp.db in Resources */,
+				49988CEB0F2F712500672AC4 /* favoriteArrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +570,10 @@
 				4998897B0F2EC24E00672AC4 /* NBInvocationQueue.m in Sources */,
 				49988B6B0F2F4A5D00672AC4 /* TPFavoriteTableController.m in Sources */,
 				49988BAD0F2F511B00672AC4 /* TPFavoriteTrip.m in Sources */,
+				49988C890F2F68FD00672AC4 /* TPFavoriteCell.m in Sources */,
+				49988DA10F2F813000672AC4 /* TPRecentCell.m in Sources */,
+				49988DA50F2F81C400672AC4 /* TPRecentTrip.m in Sources */,
+				49988DAF0F2F84BD00672AC4 /* TPRecentTableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

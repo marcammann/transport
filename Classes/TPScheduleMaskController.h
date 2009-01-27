@@ -27,6 +27,8 @@
     UIViewController *parentController;
 }
 
+@property (nonatomic, retain) TPTrip *currentTrip;
+
 - (id)initWithViewController:(UIViewController *)aController;
 - (UIButton *)createSmallButtonWithTitle:(NSString *)title xoffset:(CGFloat)xoffset yoffset:(CGFloat)yoffset;
 - (UIImageView *)createHighlightWithText:(NSString *)text;

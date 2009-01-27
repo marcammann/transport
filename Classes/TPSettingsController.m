@@ -39,7 +39,7 @@
 
 - (void)returnToParent {
     if (delegate) {
-        [delegate settingsControllerIsDone];
+        [delegate settingsControllerIsDone:self];
     }
 }
 

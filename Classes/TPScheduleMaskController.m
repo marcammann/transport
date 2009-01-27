@@ -40,7 +40,7 @@
 
 @implementation TPScheduleMaskController
 
-UIView *fromOverlay, *toOverlay;
+@synthesize currentTrip;
 
 - (id)initWithViewController:(UIViewController *)aController {
     if (self = [super init]) {
@@ -63,6 +63,12 @@ UIView *fromOverlay, *toOverlay;
     }
     
     return self;
+}
+
+- (void)setCurrentTrip:(TPTrip *)trip {
+    [currentTrip release];
+    currentTrip = [trip retain];
+    [maskTable reloadData];
 }
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
@@ -305,10 +311,12 @@ UIView *fromOverlay, *toOverlay;
     if (fromTextField.editing) {
         [fromTextField.delegate textFieldShouldReturn:fromTextField];
         [self setupField:fromTextField withInput:item];
+        currentTrip.from = [item retain];
         [autocompleteController setHidden:YES animated:YES];
     } else if (toTextField.editing) {
         [toTextField.delegate textFieldShouldReturn:toTextField];
         [self setupField:toTextField withInput:item];
+        currentTrip.to = [item retain];
         [autocompleteController setHidden:YES animated:YES];
     }
 }

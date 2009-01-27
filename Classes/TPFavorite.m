@@ -24,7 +24,7 @@ sqlite3 *database;
 }
 
 - (NSArray *)favorites {
-    NSString *sql = [NSString stringWithFormat:@"SELECT f.favorite_name, f.favorite_id, fr.place_id as from_id, fr.place_name as from_name, fr.place_coordinate_lat as from_coord_lat, fr.place_coordinate_lon as from_coord_lon, fr.place_count as from_count, fr.place_type as from_type, to.place_id as to_id,   to.place_name as to_name,   to.place_coordinate_lat as to_coord_lat,   to.place_coordinate_lon as to_coord_lon,   to.place_count as to_count,   to.place_type as to_type, FROM gg_favorite f INNER JOIN gg_place fr ON (fr.place_id = from_id) INNER JOIN gg_place to ON (to.place_id = to_id) ORDER BY favorite_name ASC"];
+    NSString *sql = [NSString stringWithFormat:@"SELECT f.favorite_name, f.favorite_id, fr.place_id as from_id, fr.place_name as from_name, fr.place_coordinate_lat as from_coord_lat, fr.place_coordinate_lon as from_coord_lon, fr.place_count as from_count, fr.place_type as from_type, tf.place_id as to_id, tf.place_name as to_name, tf.place_coordinate_lat as to_coord_lat,  tf.place_coordinate_lon as to_coord_lon, tf.place_count as to_count, tf.place_type as to_type FROM gg_favorite f LEFT JOIN gg_place fr ON (fr.place_id = f.from_id) LEFT JOIN gg_place tf ON (tf.place_id = f.to_id) ORDER BY favorite_name ASC"];
     const char *sSql = [sql UTF8String];
     return [self queryToTrip:sSql];
 }
@@ -39,7 +39,7 @@ sqlite3 *database;
 - (NSArray *)queryStatementToPlace:(sqlite3_stmt *)select {
     NSMutableArray *result = [NSMutableArray array];
     while(sqlite3_step(select) == SQLITE_ROW) {
-        [result addObject:[TPFavorite placeFromStatement:select]];
+        [result addObject:[TPFavorite placeFromStatement:select offset:0]];
     }
     
     NSArray *ret = [NSArray arrayWithArray:result];
@@ -80,13 +80,26 @@ sqlite3 *database;
     return nil;
 }
 
-+ (TPScheduleInput *)placeFromStatement:(sqlite3_stmt *)stmt {
++ (TPScheduleInput *)placeFromStatement:(sqlite3_stmt *)stmt offset:(NSInteger)offset {
     TPScheduleInput *place = [[[TPScheduleInput alloc] init] autorelease];
-    place.iid = sqlite3_column_int(stmt, 0);
-    place.stringRepresentation = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 1)];
-    place.location = [[CLLocation alloc] initWithLatitude:(CLLocationDegrees)sqlite3_column_double(stmt, 2) longitude:(CLLocationDegrees)sqlite3_column_double(stmt, 3)];
-    place.requestCount = sqlite3_column_int(stmt, 4);
-    NSString *type = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 5)];
+    place.inputID = [NSNumber numberWithInt:sqlite3_column_int(stmt, 0 + offset)];
+    const char *name = (char *)sqlite3_column_text(stmt, 1 + offset);
+    if (name != NULL) {
+        place.stringRepresentation = [NSString stringWithUTF8String:name];
+    } else {
+        place.stringRepresentation = @"";
+    }
+    
+    place.location = [[CLLocation alloc] initWithLatitude:(CLLocationDegrees)sqlite3_column_double(stmt, 2 + offset) longitude:(CLLocationDegrees)sqlite3_column_double(stmt, 3 + offset)];
+    place.requestCount = [NSNumber numberWithInt:sqlite3_column_int(stmt, 4 + offset)];
+    
+    NSString *type;
+    const char *ctype = (char *)sqlite3_column_text(stmt, 5 + offset);
+    if (ctype != NULL) {
+        type = [NSString stringWithUTF8String:ctype];
+    } else {
+        type = @"";
+    }
     
     if ([type isEqualToString:@"currentlocation"]) {
         place.type = TPScheduleInputTypeCurrentLocation;
@@ -107,10 +120,23 @@ sqlite3 *database;
     return place;
 }
 
-+ (TPTrip *)tripFromStatement:(sqlite3_stmt *)stmt {
-    TPTrip *trip = [[[TPTrip alloc] init] autorelease];
++ (TPFavoriteTrip *)tripFromStatement:(sqlite3_stmt *)stmt {
+    TPFavoriteTrip *trip = [[[TPFavoriteTrip alloc] init] autorelease];
     
-    TPTrip.tripID = sqlite3_column_int(stmt, 1);
+    const char *cname = sqlite3_column_text(stmt, 0);
+    if (cname != NULL) {
+        trip.name = [NSString stringWithUTF8String:cname];
+    }
+    
+    trip.tripID = [NSNumber numberWithInt:sqlite3_column_int(stmt, 1)];
+    
+    TPScheduleInput *from = [TPFavorite placeFromStatement:stmt offset:2];
+    TPScheduleInput *to = [TPFavorite placeFromStatement:stmt offset:8];
+    
+    trip.from = from;
+    trip.to = to;
+    
+    return trip;
 }
 
 - (void)dealloc {

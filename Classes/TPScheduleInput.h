@@ -35,8 +35,8 @@ typedef enum {
     
     NSArray *stations;
     
-    NSInteger iid;
-    NSInteger requestCount;
+    NSNumber *inputID;
+    NSNumber *requestCount;
 }
 
 @property (retain) NSString *stringRepresentation;
@@ -45,6 +45,6 @@ typedef enum {
 @property (nonatomic) TPScheduleInputType type;
 @property (nonatomic) TPScheduleInputList list;
 @property (nonatomic, retain) NSArray *stations;
-@property (readwrite) NSInteger requestCount, iid;
+@property (nonatomic, retain) NSNumber *requestCount, *inputID;
 
 @end

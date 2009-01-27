@@ -12,10 +12,12 @@
 
 @implementation TPScheduleInput
 
-@synthesize stringRepresentation, location, stations;
-@synthesize forced, validated, type, list, requestCount, iid;
+@synthesize stringRepresentation, location, stations, inputID, requestCount;
+@synthesize forced, validated, type, list;
 
 - (void)dealloc {
+    [inputID release];
+    [requestCount release];
     [stringRepresentation release];
     [location release];
     [stations release];

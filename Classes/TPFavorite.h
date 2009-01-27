@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
-#import "TPTrip.h"
+#import "TPFavoriteTrip.h"
 #import "TPScheduleInput.h"
 
 @interface TPFavorite : NSObject {
@@ -25,7 +25,7 @@
 - (NSArray *)queryStatementToTrip:(sqlite3_stmt *)select;
 
 
-+ (TPScheduleInput *)placeFromStatement:(sqlite3_stmt *)stmt;
-+ (TPTrip *)tripFromStatement:(sqlite3_stmt *)stmt;
++ (TPScheduleInput *)placeFromStatement:(sqlite3_stmt *)stmt offset:(NSInteger)offset;
++ (TPFavoriteTrip *)tripFromStatement:(sqlite3_stmt *)stmt;
 
 @end
