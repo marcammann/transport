@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* ZVVTransportAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* ZVVTransportAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		49114A810F2C80370097F9F4 /* TPTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 49114A800F2C80370097F9F4 /* TPTrip.m */; };
+		49114A850F2C80AE0097F9F4 /* TPScheduleInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 49114A840F2C80AE0097F9F4 /* TPScheduleInput.m */; };
+		49114AA20F2C86460097F9F4 /* TPQuickLookupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49114AA10F2C86460097F9F4 /* TPQuickLookupController.m */; };
+		49114AA60F2C868B0097F9F4 /* TPScheduleEntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */; };
+		49114AA90F2C88690097F9F4 /* TPSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 49114AA80F2C88690097F9F4 /* TPSettings.m */; };
+		496430140F2CC8FB00F3348C /* TPTravelDateSelectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496430130F2CC8FB00F3348C /* TPTravelDateSelectorController.m */; };
+		496430CF0F2CD56900F3348C /* inputHighlightBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 496430CE0F2CD56900F3348C /* inputHighlightBg.png */; };
+		496432F20F2D03B900F3348C /* TPTextFieldOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 496432F10F2D03B900F3348C /* TPTextFieldOverlay.m */; };
+		496433540F2D0E4E00F3348C /* TPAutocompleteTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 496433530F2D0E4E00F3348C /* TPAutocompleteTableView.m */; };
+		4964337F0F2D0F7700F3348C /* TPAutocompleteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4964337E0F2D0F7700F3348C /* TPAutocompleteController.m */; };
+		496433950F2D244400F3348C /* TPRecent.m in Sources */ = {isa = PBXBuildFile; fileRef = 496433940F2D244400F3348C /* TPRecent.m */; };
+		496433980F2D244E00F3348C /* TPFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = 496433970F2D244E00F3348C /* TPFavorite.m */; };
+		4964339B0F2D246000F3348C /* TPPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 4964339A0F2D246000F3348C /* TPPlace.m */; };
+		496434020F2D36BC00F3348C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496434010F2D36BC00F3348C /* CoreLocation.framework */; };
+		496434060F2D36C400F3348C /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 496434050F2D36C400F3348C /* libsqlite3.0.dylib */; };
+		496434BC0F2D43B800F3348C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496434BB0F2D43B800F3348C /* QuartzCore.framework */; };
+		496434C10F2D440E00F3348C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496434BF0F2D440E00F3348C /* OpenAL.framework */; };
+		496434C20F2D440E00F3348C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496434C00F2D440E00F3348C /* OpenGLES.framework */; };
+		496436070F2D5C9B00F3348C /* toolbarStation.png in Resources */ = {isa = PBXBuildFile; fileRef = 496436060F2D5C9B00F3348C /* toolbarStation.png */; };
+		4964360E0F2D5ED500F3348C /* toolbarSettings.png in Resources */ = {isa = PBXBuildFile; fileRef = 4964360D0F2D5ED500F3348C /* toolbarSettings.png */; };
+		496436120F2D5F1400F3348C /* toolbarFavorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 496436100F2D5F1400F3348C /* toolbarFavorite.png */; };
+		496436130F2D5F1400F3348C /* toolbarRecent.png in Resources */ = {isa = PBXBuildFile; fileRef = 496436110F2D5F1400F3348C /* toolbarRecent.png */; };
+		4964363F0F2D621B00F3348C /* toolbarAdd.png in Resources */ = {isa = PBXBuildFile; fileRef = 4964363E0F2D621B00F3348C /* toolbarAdd.png */; };
+		4972B4350F2E63F60070F3A5 /* tp.db in Resources */ = {isa = PBXBuildFile; fileRef = 4972B4340F2E63F60070F3A5 /* tp.db */; };
+		4984AE330F2BECF4007DD309 /* TPSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4984AE290F2BECF4007DD309 /* TPSettingsController.m */; };
+		4984AE340F2BECF4007DD309 /* TPAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4984AE2C0F2BECF4007DD309 /* TPAboutController.m */; };
+		4984AE360F2BECF4007DD309 /* TPSortOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4984AE300F2BECF4007DD309 /* TPSortOrderController.m */; };
+		4984AE370F2BECF4007DD309 /* TPChangeDurationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4984AE320F2BECF4007DD309 /* TPChangeDurationController.m */; };
+		4984AF1E0F2BF8C6007DD309 /* aboutcodesofa.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF060F2BF8C6007DD309 /* aboutcodesofa.png */; };
+		4984AF1F0F2BF8C6007DD309 /* aboutfoss.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF070F2BF8C6007DD309 /* aboutfoss.png */; };
+		4984AF200F2BF8C6007DD309 /* aboutliip.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF080F2BF8C6007DD309 /* aboutliip.png */; };
+		4984AF210F2BF8C6007DD309 /* aboutlocal.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF090F2BF8C6007DD309 /* aboutlocal.png */; };
+		4984AF220F2BF8C6007DD309 /* aboutsicher.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF0A0F2BF8C6007DD309 /* aboutsicher.png */; };
+		4984AF230F2BF8C6007DD309 /* aboutzvv.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF0B0F2BF8C6007DD309 /* aboutzvv.png */; };
+		4984AF240F2BF8C6007DD309 /* autocompleteBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF0C0F2BF8C6007DD309 /* autocompleteBackground.png */; };
+		4984AF250F2BF8C6007DD309 /* autocompleteContact.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF0D0F2BF8C6007DD309 /* autocompleteContact.png */; };
+		4984AF260F2BF8C6007DD309 /* autocompleteFavorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF0E0F2BF8C6007DD309 /* autocompleteFavorite.png */; };
+		4984AF270F2BF8C6007DD309 /* autocompleteOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF0F0F2BF8C6007DD309 /* autocompleteOverlay.png */; };
+		4984AF280F2BF8C6007DD309 /* autocompleteStation.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF100F2BF8C6007DD309 /* autocompleteStation.png */; };
+		4984AF290F2BF8C6007DD309 /* locateBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF110F2BF8C6007DD309 /* locateBlue.png */; };
+		4984AF2A0F2BF8C6007DD309 /* mainGrayButtonBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF120F2BF8C6007DD309 /* mainGrayButtonBg.png */; };
+		4984AF2B0F2BF8C6007DD309 /* mainMenuFavorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF130F2BF8C6007DD309 /* mainMenuFavorite.png */; };
+		4984AF2C0F2BF8C6007DD309 /* mainMenuRecent.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF140F2BF8C6007DD309 /* mainMenuRecent.png */; };
+		4984AF2D0F2BF8C6007DD309 /* mainMenuSchedule.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF150F2BF8C6007DD309 /* mainMenuSchedule.png */; };
+		4984AF2E0F2BF8C6007DD309 /* mainMenuSettings.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF160F2BF8C6007DD309 /* mainMenuSettings.png */; };
+		4984AF2F0F2BF8C6007DD309 /* mainMenuStation.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF170F2BF8C6007DD309 /* mainMenuStation.png */; };
+		4984AF300F2BF8C6007DD309 /* maskBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF180F2BF8C6007DD309 /* maskBg.png */; };
+		4984AF310F2BF8C6007DD309 /* maskBottomBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF190F2BF8C6007DD309 /* maskBottomBg.png */; };
+		4984AF320F2BF8C6007DD309 /* quickLookupBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF1A0F2BF8C6007DD309 /* quickLookupBg.png */; };
+		4984AF330F2BF8C6007DD309 /* refreshBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF1B0F2BF8C6007DD309 /* refreshBlue.png */; };
+		4984AF340F2BF8C6007DD309 /* scheduleTitleZVV.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF1C0F2BF8C6007DD309 /* scheduleTitleZVV.png */; };
+		4984AF350F2BF8C6007DD309 /* standardGrayButtonBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4984AF1D0F2BF8C6007DD309 /* standardGrayButtonBg.png */; };
+		4984AF410F2BFA04007DD309 /* TPScheduleMaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4984AF400F2BFA04007DD309 /* TPScheduleMaskController.m */; };
+		4998897B0F2EC24E00672AC4 /* NBInvocationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4998897A0F2EC24E00672AC4 /* NBInvocationQueue.m */; };
+		49988B6B0F2F4A5D00672AC4 /* TPFavoriteTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49988B6A0F2F4A5D00672AC4 /* TPFavoriteTableController.m */; };
+		49988BAD0F2F511B00672AC4 /* TPFavoriteTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 49988BAC0F2F511B00672AC4 /* TPFavoriteTrip.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* ZVVTransportAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZVVTransportAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* ZVVTransportAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZVVTransportAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* ZVVTransport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZVVTransport.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* ZVVTransport_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZVVTransport_Prefix.pch; sourceTree = "<group>"; };
+		49114A7F0F2C80370097F9F4 /* TPTrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTrip.h; sourceTree = "<group>"; };
+		49114A800F2C80370097F9F4 /* TPTrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTrip.m; sourceTree = "<group>"; };
+		49114A830F2C80AE0097F9F4 /* TPScheduleInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPScheduleInput.h; sourceTree = "<group>"; };
+		49114A840F2C80AE0097F9F4 /* TPScheduleInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPScheduleInput.m; sourceTree = "<group>"; };
+		49114AA00F2C86460097F9F4 /* TPQuickLookupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPQuickLookupController.h; sourceTree = "<group>"; };
+		49114AA10F2C86460097F9F4 /* TPQuickLookupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPQuickLookupController.m; sourceTree = "<group>"; };
+		49114AA40F2C868B0097F9F4 /* TPScheduleEntryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPScheduleEntryController.h; sourceTree = "<group>"; };
+		49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPScheduleEntryController.m; sourceTree = "<group>"; };
+		49114AA70F2C88690097F9F4 /* TPSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPSettings.h; sourceTree = "<group>"; };
+		49114AA80F2C88690097F9F4 /* TPSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPSettings.m; sourceTree = "<group>"; };
+		496430120F2CC8FB00F3348C /* TPTravelDateSelectorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTravelDateSelectorController.h; sourceTree = "<group>"; };
+		496430130F2CC8FB00F3348C /* TPTravelDateSelectorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTravelDateSelectorController.m; sourceTree = "<group>"; };
+		496430CE0F2CD56900F3348C /* inputHighlightBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inputHighlightBg.png; path = images/inputHighlightBg.png; sourceTree = "<group>"; };
+		496432F00F2D03B900F3348C /* TPTextFieldOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTextFieldOverlay.h; sourceTree = "<group>"; };
+		496432F10F2D03B900F3348C /* TPTextFieldOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTextFieldOverlay.m; sourceTree = "<group>"; };
+		496433520F2D0E4E00F3348C /* TPAutocompleteTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPAutocompleteTableView.h; sourceTree = "<group>"; };
+		496433530F2D0E4E00F3348C /* TPAutocompleteTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPAutocompleteTableView.m; sourceTree = "<group>"; };
+		4964337D0F2D0F7700F3348C /* TPAutocompleteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPAutocompleteController.h; sourceTree = "<group>"; };
+		4964337E0F2D0F7700F3348C /* TPAutocompleteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPAutocompleteController.m; sourceTree = "<group>"; };
+		496433930F2D244400F3348C /* TPRecent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPRecent.h; sourceTree = "<group>"; };
+		496433940F2D244400F3348C /* TPRecent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPRecent.m; sourceTree = "<group>"; };
+		496433960F2D244E00F3348C /* TPFavorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPFavorite.h; sourceTree = "<group>"; };
+		496433970F2D244E00F3348C /* TPFavorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPFavorite.m; sourceTree = "<group>"; };
+		496433990F2D246000F3348C /* TPPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPPlace.h; sourceTree = "<group>"; };
+		4964339A0F2D246000F3348C /* TPPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPPlace.m; sourceTree = "<group>"; };
+		496434010F2D36BC00F3348C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		496434050F2D36C400F3348C /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = ../TransportAppOss/trunk/libsqlite3.0.dylib; sourceTree = SOURCE_ROOT; };
+		496434BB0F2D43B800F3348C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		496434BF0F2D440E00F3348C /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		496434C00F2D440E00F3348C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		496436060F2D5C9B00F3348C /* toolbarStation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toolbarStation.png; path = images/toolbarStation.png; sourceTree = "<group>"; };
+		4964360D0F2D5ED500F3348C /* toolbarSettings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toolbarSettings.png; path = images/toolbarSettings.png; sourceTree = "<group>"; };
+		496436100F2D5F1400F3348C /* toolbarFavorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toolbarFavorite.png; path = images/toolbarFavorite.png; sourceTree = "<group>"; };
+		496436110F2D5F1400F3348C /* toolbarRecent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toolbarRecent.png; path = images/toolbarRecent.png; sourceTree = "<group>"; };
+		4964363E0F2D621B00F3348C /* toolbarAdd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toolbarAdd.png; path = images/toolbarAdd.png; sourceTree = "<group>"; };
+		4972B4340F2E63F60070F3A5 /* tp.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = tp.db; sourceTree = "<group>"; };
+		4984AE280F2BECF4007DD309 /* TPSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPSettingsController.h; sourceTree = "<group>"; };
+		4984AE290F2BECF4007DD309 /* TPSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPSettingsController.m; sourceTree = "<group>"; };
+		4984AE2B0F2BECF4007DD309 /* TPAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPAboutController.h; sourceTree = "<group>"; };
+		4984AE2C0F2BECF4007DD309 /* TPAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPAboutController.m; sourceTree = "<group>"; };
+		4984AE2F0F2BECF4007DD309 /* TPSortOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPSortOrderController.h; sourceTree = "<group>"; };
+		4984AE300F2BECF4007DD309 /* TPSortOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPSortOrderController.m; sourceTree = "<group>"; };
+		4984AE310F2BECF4007DD309 /* TPChangeDurationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPChangeDurationController.h; sourceTree = "<group>"; };
+		4984AE320F2BECF4007DD309 /* TPChangeDurationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPChangeDurationController.m; sourceTree = "<group>"; };
+		4984AF060F2BF8C6007DD309 /* aboutcodesofa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aboutcodesofa.png; path = images/aboutcodesofa.png; sourceTree = "<group>"; };
+		4984AF070F2BF8C6007DD309 /* aboutfoss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aboutfoss.png; path = images/aboutfoss.png; sourceTree = "<group>"; };
+		4984AF080F2BF8C6007DD309 /* aboutliip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aboutliip.png; path = images/aboutliip.png; sourceTree = "<group>"; };
+		4984AF090F2BF8C6007DD309 /* aboutlocal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aboutlocal.png; path = images/aboutlocal.png; sourceTree = "<group>"; };
+		4984AF0A0F2BF8C6007DD309 /* aboutsicher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aboutsicher.png; path = images/aboutsicher.png; sourceTree = "<group>"; };
+		4984AF0B0F2BF8C6007DD309 /* aboutzvv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aboutzvv.png; path = images/aboutzvv.png; sourceTree = "<group>"; };
+		4984AF0C0F2BF8C6007DD309 /* autocompleteBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = autocompleteBackground.png; path = images/autocompleteBackground.png; sourceTree = "<group>"; };
+		4984AF0D0F2BF8C6007DD309 /* autocompleteContact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = autocompleteContact.png; path = images/autocompleteContact.png; sourceTree = "<group>"; };
+		4984AF0E0F2BF8C6007DD309 /* autocompleteFavorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = autocompleteFavorite.png; path = images/autocompleteFavorite.png; sourceTree = "<group>"; };
+		4984AF0F0F2BF8C6007DD309 /* autocompleteOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = autocompleteOverlay.png; path = images/autocompleteOverlay.png; sourceTree = "<group>"; };
+		4984AF100F2BF8C6007DD309 /* autocompleteStation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = autocompleteStation.png; path = images/autocompleteStation.png; sourceTree = "<group>"; };
+		4984AF110F2BF8C6007DD309 /* locateBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = locateBlue.png; path = images/locateBlue.png; sourceTree = "<group>"; };
+		4984AF120F2BF8C6007DD309 /* mainGrayButtonBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainGrayButtonBg.png; path = images/mainGrayButtonBg.png; sourceTree = "<group>"; };
+		4984AF130F2BF8C6007DD309 /* mainMenuFavorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainMenuFavorite.png; path = images/mainMenuFavorite.png; sourceTree = "<group>"; };
+		4984AF140F2BF8C6007DD309 /* mainMenuRecent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainMenuRecent.png; path = images/mainMenuRecent.png; sourceTree = "<group>"; };
+		4984AF150F2BF8C6007DD309 /* mainMenuSchedule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainMenuSchedule.png; path = images/mainMenuSchedule.png; sourceTree = "<group>"; };
+		4984AF160F2BF8C6007DD309 /* mainMenuSettings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainMenuSettings.png; path = images/mainMenuSettings.png; sourceTree = "<group>"; };
+		4984AF170F2BF8C6007DD309 /* mainMenuStation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainMenuStation.png; path = images/mainMenuStation.png; sourceTree = "<group>"; };
+		4984AF180F2BF8C6007DD309 /* maskBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = maskBg.png; path = images/maskBg.png; sourceTree = "<group>"; };
+		4984AF190F2BF8C6007DD309 /* maskBottomBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = maskBottomBg.png; path = images/maskBottomBg.png; sourceTree = "<group>"; };
+		4984AF1A0F2BF8C6007DD309 /* quickLookupBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quickLookupBg.png; path = images/quickLookupBg.png; sourceTree = "<group>"; };
+		4984AF1B0F2BF8C6007DD309 /* refreshBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = refreshBlue.png; path = images/refreshBlue.png; sourceTree = "<group>"; };
+		4984AF1C0F2BF8C6007DD309 /* scheduleTitleZVV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scheduleTitleZVV.png; path = images/scheduleTitleZVV.png; sourceTree = "<group>"; };
+		4984AF1D0F2BF8C6007DD309 /* standardGrayButtonBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = standardGrayButtonBg.png; path = images/standardGrayButtonBg.png; sourceTree = "<group>"; };
+		4984AF3F0F2BFA04007DD309 /* TPScheduleMaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPScheduleMaskController.h; sourceTree = "<group>"; };
+		4984AF400F2BFA04007DD309 /* TPScheduleMaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPScheduleMaskController.m; sourceTree = "<group>"; };
+		499889790F2EC24E00672AC4 /* NBInvocationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBInvocationQueue.h; sourceTree = "<group>"; };
+		4998897A0F2EC24E00672AC4 /* NBInvocationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBInvocationQueue.m; sourceTree = "<group>"; };
+		49988B690F2F4A5D00672AC4 /* TPFavoriteTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPFavoriteTableController.h; sourceTree = "<group>"; };
+		49988B6A0F2F4A5D00672AC4 /* TPFavoriteTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPFavoriteTableController.m; sourceTree = "<group>"; };
+		49988BAB0F2F511B00672AC4 /* TPFavoriteTrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPFavoriteTrip.h; sourceTree = "<group>"; };
+		49988BAC0F2F511B00672AC4 /* TPFavoriteTrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPFavoriteTrip.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				496434020F2D36BC00F3348C /* CoreLocation.framework in Frameworks */,
+				496434060F2D36C400F3348C /* libsqlite3.0.dylib in Frameworks */,
+				496434BC0F2D43B800F3348C /* QuartzCore.framework in Frameworks */,
+				496434C10F2D440E00F3348C /* OpenAL.framework in Frameworks */,
+				496434C20F2D440E00F3348C /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				49114A820F2C803F0097F9F4 /* Models */,
+				496432560F2CFDEE00F3348C /* Views */,
+				4984AEF10F2BF83C007DD309 /* Controllers */,
+				1D3623240D0F684500981E51 /* ZVVTransportAppDelegate.h */,
+				1D3623250D0F684500981E51 /* ZVVTransportAppDelegate.m */,
+				4998897C0F2EC25600672AC4 /* Lib */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* ZVVTransport.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				4984AF360F2BF8D1007DD309 /* Images */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* ZVVTransport_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4972B4340F2E63F60070F3A5 /* tp.db */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				496434BF0F2D440E00F3348C /* OpenAL.framework */,
+				496434C00F2D440E00F3348C /* OpenGLES.framework */,
+				496434BB0F2D43B800F3348C /* QuartzCore.framework */,
+				496434050F2D36C400F3348C /* libsqlite3.0.dylib */,
+				496434010F2D36BC00F3348C /* CoreLocation.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49114A820F2C803F0097F9F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				49114A7F0F2C80370097F9F4 /* TPTrip.h */,
+				49114A800F2C80370097F9F4 /* TPTrip.m */,
+				49114A830F2C80AE0097F9F4 /* TPScheduleInput.h */,
+				49114A840F2C80AE0097F9F4 /* TPScheduleInput.m */,
+				49114AA70F2C88690097F9F4 /* TPSettings.h */,
+				49114AA80F2C88690097F9F4 /* TPSettings.m */,
+				496433930F2D244400F3348C /* TPRecent.h */,
+				496433940F2D244400F3348C /* TPRecent.m */,
+				496433960F2D244E00F3348C /* TPFavorite.h */,
+				496433970F2D244E00F3348C /* TPFavorite.m */,
+				496433990F2D246000F3348C /* TPPlace.h */,
+				4964339A0F2D246000F3348C /* TPPlace.m */,
+				49988BAB0F2F511B00672AC4 /* TPFavoriteTrip.h */,
+				49988BAC0F2F511B00672AC4 /* TPFavoriteTrip.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		49114AA30F2C864E0097F9F4 /* Entry Sub Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4984AF3F0F2BFA04007DD309 /* TPScheduleMaskController.h */,
+				4984AF400F2BFA04007DD309 /* TPScheduleMaskController.m */,
+				49114AA00F2C86460097F9F4 /* TPQuickLookupController.h */,
+				49114AA10F2C86460097F9F4 /* TPQuickLookupController.m */,
+				496430120F2CC8FB00F3348C /* TPTravelDateSelectorController.h */,
+				496430130F2CC8FB00F3348C /* TPTravelDateSelectorController.m */,
+				4964337D0F2D0F7700F3348C /* TPAutocompleteController.h */,
+				4964337E0F2D0F7700F3348C /* TPAutocompleteController.m */,
+			);
+			name = "Entry Sub Controllers";
+			sourceTree = "<group>";
+		};
+		496432560F2CFDEE00F3348C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				496432F00F2D03B900F3348C /* TPTextFieldOverlay.h */,
+				496432F10F2D03B900F3348C /* TPTextFieldOverlay.m */,
+				496433520F2D0E4E00F3348C /* TPAutocompleteTableView.h */,
+				496433530F2D0E4E00F3348C /* TPAutocompleteTableView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4984AE270F2BECF4007DD309 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4984AE2A0F2BECF4007DD309 /* SubControllers */,
+				4984AE280F2BECF4007DD309 /* TPSettingsController.h */,
+				4984AE290F2BECF4007DD309 /* TPSettingsController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		4984AE2A0F2BECF4007DD309 /* SubControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4984AE2B0F2BECF4007DD309 /* TPAboutController.h */,
+				4984AE2C0F2BECF4007DD309 /* TPAboutController.m */,
+				4984AE2F0F2BECF4007DD309 /* TPSortOrderController.h */,
+				4984AE300F2BECF4007DD309 /* TPSortOrderController.m */,
+				4984AE310F2BECF4007DD309 /* TPChangeDurationController.h */,
+				4984AE320F2BECF4007DD309 /* TPChangeDurationController.m */,
+			);
+			name = SubControllers;
+			sourceTree = "<group>";
+		};
+		4984AEF10F2BF83C007DD309 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4984AE270F2BECF4007DD309 /* Settings */,
+				4984AF440F2BFA19007DD309 /* Schedule */,
+				49988B6C0F2F4A6700672AC4 /* Favorites */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		4984AF360F2BF8D1007DD309 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4998882C0F2E6DAB00672AC4 /* About */,
+				4998882E0F2E6DB900672AC4 /* Autocomplete */,
+				4998882F0F2E6DC200672AC4 /* Tab Bar */,
+				4998882D0F2E6DB100672AC4 /* Toolbar */,
+				496430CE0F2CD56900F3348C /* inputHighlightBg.png */,
+				4984AF110F2BF8C6007DD309 /* locateBlue.png */,
+				4984AF180F2BF8C6007DD309 /* maskBg.png */,
+				4984AF190F2BF8C6007DD309 /* maskBottomBg.png */,
+				4984AF1A0F2BF8C6007DD309 /* quickLookupBg.png */,
+				4984AF1B0F2BF8C6007DD309 /* refreshBlue.png */,
+				4984AF1C0F2BF8C6007DD309 /* scheduleTitleZVV.png */,
+				4984AF1D0F2BF8C6007DD309 /* standardGrayButtonBg.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		4984AF440F2BFA19007DD309 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				49114AA30F2C864E0097F9F4 /* Entry Sub Controllers */,
+				49114AA40F2C868B0097F9F4 /* TPScheduleEntryController.h */,
+				49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */,
+			);
+			name = Schedule;
+			sourceTree = "<group>";
+		};
+		4998882C0F2E6DAB00672AC4 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				4984AF060F2BF8C6007DD309 /* aboutcodesofa.png */,
+				4984AF070F2BF8C6007DD309 /* aboutfoss.png */,
+				4984AF080F2BF8C6007DD309 /* aboutliip.png */,
+				4984AF090F2BF8C6007DD309 /* aboutlocal.png */,
+				4984AF0A0F2BF8C6007DD309 /* aboutsicher.png */,
+				4984AF0B0F2BF8C6007DD309 /* aboutzvv.png */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
+		4998882D0F2E6DB100672AC4 /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				4964363E0F2D621B00F3348C /* toolbarAdd.png */,
+				496436100F2D5F1400F3348C /* toolbarFavorite.png */,
+				496436110F2D5F1400F3348C /* toolbarRecent.png */,
+				4964360D0F2D5ED500F3348C /* toolbarSettings.png */,
+				496436060F2D5C9B00F3348C /* toolbarStation.png */,
+			);
+			name = Toolbar;
+			sourceTree = "<group>";
+		};
+		4998882E0F2E6DB900672AC4 /* Autocomplete */ = {
+			isa = PBXGroup;
+			children = (
+				4984AF0C0F2BF8C6007DD309 /* autocompleteBackground.png */,
+				4984AF0D0F2BF8C6007DD309 /* autocompleteContact.png */,
+				4984AF0E0F2BF8C6007DD309 /* autocompleteFavorite.png */,
+				4984AF0F0F2BF8C6007DD309 /* autocompleteOverlay.png */,
+				4984AF100F2BF8C6007DD309 /* autocompleteStation.png */,
+			);
+			name = Autocomplete;
+			sourceTree = "<group>";
+		};
+		4998882F0F2E6DC200672AC4 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				4984AF120F2BF8C6007DD309 /* mainGrayButtonBg.png */,
+				4984AF130F2BF8C6007DD309 /* mainMenuFavorite.png */,
+				4984AF140F2BF8C6007DD309 /* mainMenuRecent.png */,
+				4984AF150F2BF8C6007DD309 /* mainMenuSchedule.png */,
+				4984AF160F2BF8C6007DD309 /* mainMenuSettings.png */,
+				4984AF170F2BF8C6007DD309 /* mainMenuStation.png */,
+			);
+			name = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		4998897C0F2EC25600672AC4 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				499889790F2EC24E00672AC4 /* NBInvocationQueue.h */,
+				4998897A0F2EC24E00672AC4 /* NBInvocationQueue.m */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		49988B6C0F2F4A6700672AC4 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				49988B690F2F4A5D00672AC4 /* TPFavoriteTableController.h */,
+				49988B6A0F2F4A5D00672AC4 /* TPFavoriteTableController.m */,
+			);
+			name = Favorites;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* ZVVTransport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "ZVVTransport" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZVVTransport;
+			productName = ZVVTransport;
+			productReference = 1D6058910D05DD3D006BFB54 /* ZVVTransport.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ZVVTransport" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* ZVVTransport */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				4984AF1E0F2BF8C6007DD309 /* aboutcodesofa.png in Resources */,
+				4984AF1F0F2BF8C6007DD309 /* aboutfoss.png in Resources */,
+				4984AF200F2BF8C6007DD309 /* aboutliip.png in Resources */,
+				4984AF210F2BF8C6007DD309 /* aboutlocal.png in Resources */,
+				4984AF220F2BF8C6007DD309 /* aboutsicher.png in Resources */,
+				4984AF230F2BF8C6007DD309 /* aboutzvv.png in Resources */,
+				4984AF240F2BF8C6007DD309 /* autocompleteBackground.png in Resources */,
+				4984AF250F2BF8C6007DD309 /* autocompleteContact.png in Resources */,
+				4984AF260F2BF8C6007DD309 /* autocompleteFavorite.png in Resources */,
+				4984AF270F2BF8C6007DD309 /* autocompleteOverlay.png in Resources */,
+				4984AF280F2BF8C6007DD309 /* autocompleteStation.png in Resources */,
+				4984AF290F2BF8C6007DD309 /* locateBlue.png in Resources */,
+				4984AF2A0F2BF8C6007DD309 /* mainGrayButtonBg.png in Resources */,
+				4984AF2B0F2BF8C6007DD309 /* mainMenuFavorite.png in Resources */,
+				4984AF2C0F2BF8C6007DD309 /* mainMenuRecent.png in Resources */,
+				4984AF2D0F2BF8C6007DD309 /* mainMenuSchedule.png in Resources */,
+				4984AF2E0F2BF8C6007DD309 /* mainMenuSettings.png in Resources */,
+				4984AF2F0F2BF8C6007DD309 /* mainMenuStation.png in Resources */,
+				4984AF300F2BF8C6007DD309 /* maskBg.png in Resources */,
+				4984AF310F2BF8C6007DD309 /* maskBottomBg.png in Resources */,
+				4984AF320F2BF8C6007DD309 /* quickLookupBg.png in Resources */,
+				4984AF330F2BF8C6007DD309 /* refreshBlue.png in Resources */,
+				4984AF340F2BF8C6007DD309 /* scheduleTitleZVV.png in Resources */,
+				4984AF350F2BF8C6007DD309 /* standardGrayButtonBg.png in Resources */,
+				496430CF0F2CD56900F3348C /* inputHighlightBg.png in Resources */,
+				496436070F2D5C9B00F3348C /* toolbarStation.png in Resources */,
+				4964360E0F2D5ED500F3348C /* toolbarSettings.png in Resources */,
+				496436120F2D5F1400F3348C /* toolbarFavorite.png in Resources */,
+				496436130F2D5F1400F3348C /* toolbarRecent.png in Resources */,
+				4964363F0F2D621B00F3348C /* toolbarAdd.png in Resources */,
+				4972B4350F2E63F60070F3A5 /* tp.db in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* ZVVTransportAppDelegate.m in Sources */,
+				4984AE330F2BECF4007DD309 /* TPSettingsController.m in Sources */,
+				4984AE340F2BECF4007DD309 /* TPAboutController.m in Sources */,
+				4984AE360F2BECF4007DD309 /* TPSortOrderController.m in Sources */,
+				4984AE370F2BECF4007DD309 /* TPChangeDurationController.m in Sources */,
+				4984AF410F2BFA04007DD309 /* TPScheduleMaskController.m in Sources */,
+				49114A810F2C80370097F9F4 /* TPTrip.m in Sources */,
+				49114A850F2C80AE0097F9F4 /* TPScheduleInput.m in Sources */,
+				49114AA20F2C86460097F9F4 /* TPQuickLookupController.m in Sources */,
+				49114AA60F2C868B0097F9F4 /* TPScheduleEntryController.m in Sources */,
+				49114AA90F2C88690097F9F4 /* TPSettings.m in Sources */,
+				496430140F2CC8FB00F3348C /* TPTravelDateSelectorController.m in Sources */,
+				496432F20F2D03B900F3348C /* TPTextFieldOverlay.m in Sources */,
+				496433540F2D0E4E00F3348C /* TPAutocompleteTableView.m in Sources */,
+				4964337F0F2D0F7700F3348C /* TPAutocompleteController.m in Sources */,
+				496433950F2D244400F3348C /* TPRecent.m in Sources */,
+				496433980F2D244E00F3348C /* TPFavorite.m in Sources */,
+				4964339B0F2D246000F3348C /* TPPlace.m in Sources */,
+				4998897B0F2EC24E00672AC4 /* NBInvocationQueue.m in Sources */,
+				49988B6B0F2F4A5D00672AC4 /* TPFavoriteTableController.m in Sources */,
+				49988BAD0F2F511B00672AC4 /* TPFavoriteTrip.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ZVVTransport_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../TransportAppOss/trunk\"",
+				);
+				PRODUCT_NAME = ZVVTransport;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ZVVTransport_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../TransportAppOss/trunk\"",
+				);
+				PRODUCT_NAME = ZVVTransport;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Marc Ammann";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D18DA173-B556-4824-88EF-9A590AFC8EFA";
+				SDKROOT = iphoneos2.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "ZVVTransport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ZVVTransport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
