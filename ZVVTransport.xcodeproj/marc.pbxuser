@@ -1539,6 +1539,8 @@
 			499890490F2FD07F00672AC4 /* PBXTextBookmark */ = 499890490F2FD07F00672AC4 /* PBXTextBookmark */;
 			4998904B0F2FD0DB00672AC4 /* PBXTextBookmark */ = 4998904B0F2FD0DB00672AC4 /* PBXTextBookmark */;
 			4998904C0F2FD0DB00672AC4 /* PBXTextBookmark */ = 4998904C0F2FD0DB00672AC4 /* PBXTextBookmark */;
+			499890510F2FD90000672AC4 /* PBXTextBookmark */ = 499890510F2FD90000672AC4 /* PBXTextBookmark */;
+			499890520F2FD90000672AC4 /* PBXTextBookmark */ = 499890520F2FD90000672AC4 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 4984AE200F2BEB6F007DD309 /* Source Control */;
 		userBuildSettings = {
@@ -1679,9 +1681,9 @@
 	};
 	49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1488, 2406}}";
-			sepNavSelRange = "{4452, 0}";
-			sepNavVisRange = "{3451, 1984}";
+			sepNavIntBoundsRect = "{{0, 0}, {1488, 2420}}";
+			sepNavSelRange = "{5221, 0}";
+			sepNavVisRange = "{3451, 1998}";
 		};
 	};
 	49114AA70F2C88690097F9F4 /* TPSettings.h */ = {
@@ -1743,7 +1745,7 @@
 		fRef = 49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */;
 		name = "TPScheduleEntryController.m: 14";
 		rLen = 845;
-		rLoc = 5915;
+		rLoc = 5928;
 		rType = 0;
 		vrLen = 688;
 		vrLoc = 681;
@@ -1893,7 +1895,7 @@
 		fRef = 49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */;
 		name = "TPScheduleEntryController.m: 22";
 		rLen = 0;
-		rLoc = 5883;
+		rLoc = 5896;
 		rType = 0;
 		vrLen = 813;
 		vrLoc = 0;
@@ -2810,7 +2812,7 @@
 		fRef = 49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */;
 		name = "TPScheduleEntryController.m: 26";
 		rLen = 0;
-		rLoc = 5883;
+		rLoc = 5896;
 		rType = 0;
 		vrLen = 703;
 		vrLoc = 153;
@@ -3038,7 +3040,7 @@
 		fRef = 49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */;
 		name = "TPScheduleEntryController.m: 119";
 		rLen = 0;
-		rLoc = 7566;
+		rLoc = 7579;
 		rType = 0;
 		vrLen = 1353;
 		vrLoc = 3593;
@@ -3868,7 +3870,7 @@
 		fRef = 49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */;
 		name = "TPScheduleEntryController.m: 119";
 		rLen = 0;
-		rLoc = 7566;
+		rLoc = 7579;
 		rType = 0;
 		vrLen = 1016;
 		vrLoc = 3930;
@@ -3908,7 +3910,7 @@
 		fRef = 49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */;
 		name = "TPScheduleEntryController.m: 119";
 		rLen = 0;
-		rLoc = 7566;
+		rLoc = 7579;
 		rType = 0;
 		vrLen = 1016;
 		vrLoc = 3930;
@@ -5469,7 +5471,7 @@
 		fRef = 49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */;
 		name = "TPScheduleEntryController.m: 119";
 		rLen = 0;
-		rLoc = 7566;
+		rLoc = 7579;
 		rType = 0;
 		vrLen = 1804;
 		vrLoc = 2087;
@@ -5499,7 +5501,7 @@
 		fRef = 49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */;
 		name = "TPScheduleEntryController.m: 119";
 		rLen = 0;
-		rLoc = 7566;
+		rLoc = 7579;
 		rType = 0;
 		vrLen = 1804;
 		vrLoc = 2087;
@@ -6529,7 +6531,7 @@
 		fRef = 49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */;
 		name = "TPScheduleEntryController.m: 119";
 		rLen = 0;
-		rLoc = 7566;
+		rLoc = 7579;
 		rType = 0;
 		vrLen = 1842;
 		vrLoc = 2085;
@@ -6569,7 +6571,7 @@
 		fRef = 49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */;
 		name = "TPScheduleEntryController.m: 119";
 		rLen = 0;
-		rLoc = 7566;
+		rLoc = 7579;
 		rType = 0;
 		vrLen = 1842;
 		vrLoc = 2085;
@@ -9693,7 +9695,7 @@
 		fRef = 49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */;
 		name = "TPScheduleEntryController.m: 74";
 		rLen = 45;
-		rLoc = 5810;
+		rLoc = 5823;
 		rType = 0;
 		vrLen = 3241;
 		vrLoc = 532;
@@ -9723,7 +9725,7 @@
 		fRef = 49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */;
 		name = "TPScheduleEntryController.m: 74";
 		rLen = 45;
-		rLoc = 5810;
+		rLoc = 5823;
 		rType = 0;
 		vrLen = 3241;
 		vrLoc = 532;
@@ -9793,7 +9795,7 @@
 		fRef = 49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */;
 		name = "TPScheduleEntryController.m: 74";
 		rLen = 45;
-		rLoc = 5810;
+		rLoc = 5823;
 		rType = 0;
 		vrLen = 3241;
 		vrLoc = 532;
@@ -16236,7 +16238,7 @@
 		fRef = 49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */;
 		name = "TPScheduleEntryController.m: 91";
 		rLen = 0;
-		rLoc = 5883;
+		rLoc = 5896;
 		rType = 0;
 		vrLen = 2542;
 		vrLoc = 0;
@@ -16616,7 +16618,7 @@
 		fRef = 49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */;
 		name = "TPScheduleEntryController.m: 106";
 		rLen = 0;
-		rLoc = 5230;
+		rLoc = 5243;
 		rType = 0;
 		vrLen = 2124;
 		vrLoc = 3451;
@@ -16679,6 +16681,26 @@
 		rLoc = 4452;
 		rType = 0;
 		vrLen = 1984;
+		vrLoc = 3451;
+	};
+	499890510F2FD90000672AC4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 49988EE00F2FB53200672AC4 /* TPMeansTableController.h */;
+		name = "TPMeansTableController.h: 13";
+		rLen = 0;
+		rLoc = 261;
+		rType = 0;
+		vrLen = 409;
+		vrLoc = 3;
+	};
+	499890520F2FD90000672AC4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 49114AA50F2C868B0097F9F4 /* TPScheduleEntryController.m */;
+		name = "TPScheduleEntryController.m: 106";
+		rLen = 0;
+		rLoc = 5221;
+		rType = 0;
+		vrLen = 1998;
 		vrLoc = 3451;
 	};
 }

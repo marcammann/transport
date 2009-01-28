@@ -103,6 +103,7 @@
             [enterName show];
             [enterName release];
         } else {
+            
             // TODO: Check and Write to Favorites
         }
     }
