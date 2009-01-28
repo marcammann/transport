@@ -30,7 +30,7 @@ sqlite3 *database;
 }
 
 - (NSArray *)favoriteStations:(NSString *)where {
-    NSString *sql = [NSString stringWithFormat:@"SELECT p.* FROM gg_place p INNER JOIN gg_favorite f ON (f.from_id = p.place_id OR f.to_id = p.place_id) WHERE LOWER(place_name) GLOB '*%@*' LIMIT 50", [where lowercaseString]];
+    NSString *sql = [NSString stringWithFormat:@"SELECT DISTINCT p.* FROM gg_place p INNER JOIN gg_favorite f ON (f.from_id = p.place_id OR f.to_id = p.place_id) WHERE p.place_type != 'currentlocation' AND LOWER(place_name) GLOB '*%@*' LIMIT 50", [where lowercaseString]];
     
     const char *sSql = [sql UTF8String];
     return [self queryToPlace:sSql];

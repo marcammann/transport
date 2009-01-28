@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "TPMean.h"
 
 @interface TPSettings : NSObject {
     // Preferences
@@ -20,6 +20,7 @@
     BOOL compressedTripView;
     BOOL noRunning;
     NSMutableArray *sortOrder;
+    NSMutableArray *meansOfTransport;
 }
 
 // Preferences
@@ -32,6 +33,7 @@
 @property (readwrite) BOOL compressedTripView;
 @property (readwrite) BOOL noRunning;
 @property (nonatomic, retain) NSMutableArray *sortOrder;
+@property (nonatomic, retain) NSMutableArray *meansOfTransport;
 
 - (id)initFromDefaults;
 - (void)saveToDefaults;

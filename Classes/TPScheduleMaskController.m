@@ -119,6 +119,8 @@
                     dateInputField = [self setupFieldWithTitle:NSLocalizedString(@"Arr.:", nil)];
                 }
                 
+                dateInputField.clearButtonMode = UITextFieldViewModeNever;
+                
                 // Content
                 if (currentTrip.userEditDate) {
                     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -139,6 +141,9 @@
     } else if (indexPath.row == 3) {
         UIButton *switchDirectionsButton = [self createSmallButtonWithTitle:NSLocalizedString(@"Switch Directions", nil) xoffset:10.0f yoffset:15.0f];
         UIButton *transportMeansButton = [self createSmallButtonWithTitle:NSLocalizedString(@"Means of Transport", nil) xoffset:165.0f yoffset:15.0f];
+        
+        [switchDirectionsButton addTarget:self action:@selector(switchDirections:) forControlEvents:UIControlEventTouchUpInside];
+        [transportMeansButton addTarget:self action:@selector(showMeansModal) forControlEvents:UIControlEventTouchUpInside];
         
         [cell addSubview:switchDirectionsButton];
         [cell addSubview:transportMeansButton];
@@ -319,6 +324,24 @@
         currentTrip.to = [item retain];
         [autocompleteController setHidden:YES animated:YES];
     }
+}
+
+- (void)showMeansModal {
+    TPMeansTableController *meansController = [[[TPMeansTableController alloc] initWithDelegate:self] autorelease];
+    UINavigationController *meansNavController = [[UINavigationController alloc] initWithRootViewController:meansController];
+    
+    [parentController.navigationController presentModalViewController:meansNavController animated:YES];
+}
+
+- (void)meansControllerIsDone:(TPMeansTableController *)controller {
+    [parentController.navigationController dismissModalViewControllerAnimated:YES];
+}
+
+- (void)switchDirections:(id)sender {
+    TPScheduleInput *tmp = currentTrip.from;
+    currentTrip.from = currentTrip.to;
+    currentTrip.to = tmp;
+    [maskTable reloadData];
 }
 
 - (void)didReceiveMemoryWarning {

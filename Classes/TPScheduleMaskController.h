@@ -15,7 +15,9 @@
 
 #import "TPTextFieldOverlay.h"
 
-@interface TPScheduleMaskController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, TPAutocompleteTableViewDelegate> {
+#import "TPMeansTableController.h"
+
+@interface TPScheduleMaskController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, TPAutocompleteTableViewDelegate, TPMeansTableControllerDelegate> {
     TPTrip *currentTrip;
     TPAutocompleteController *autocompleteController;
     

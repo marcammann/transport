@@ -10,6 +10,7 @@
 #import "TPScheduleEntryController.h"
 #import "TPSettingsController.h"
 #import "TPSettings.h"
+#import "TPMean.h"
 
 #define kScreenWidth 320.0f
 #define kScreenHeight 480.0f

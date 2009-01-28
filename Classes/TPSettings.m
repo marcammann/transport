@@ -10,7 +10,7 @@
 
 
 @implementation TPSettings
-@synthesize locationAccuracy, minChangeDuration, maxWalkingDistance, noRunning, compressedTripView, bicycleTransportation, groupTransportation, suppressLongChanges, sortOrder;
+@synthesize locationAccuracy, minChangeDuration, maxWalkingDistance, noRunning, compressedTripView, bicycleTransportation, groupTransportation, suppressLongChanges, sortOrder, meansOfTransport;
 
 - (id)initFromDefaults {
     if (self = [super init]) {
@@ -40,6 +40,7 @@
     self.groupTransportation = [defaults boolForKey:@"groupTransportation"];
     self.suppressLongChanges = [defaults boolForKey:@"suppressLongChanges"];
     self.sortOrder = [NSMutableArray arrayWithArray:[defaults objectForKey:@"sortOrder"]];
+    self.meansOfTransport = [NSMutableArray arrayWithArray:[defaults objectForKey:@"meansOfTransport"]];
 }
 
 - (void)saveToDefaults {
@@ -54,6 +55,7 @@
     [defaults setBool:self.groupTransportation forKey:@"groupTransportation"];
     [defaults setBool:self.suppressLongChanges forKey:@"suppressLongChanges"];
     [defaults setObject:self.sortOrder forKey:@"sortOrder"];
+    [defaults setObject:self.meansOfTransport forKey:@"meansOfTransport"];
 }
 
 - (void)dealloc {
@@ -61,6 +63,7 @@
     [maxWalkingDistance release];
     [locationAccuracy release];
     [minChangeDuration release];
+    [meansOfTransport release];
     [super dealloc];
 }
 

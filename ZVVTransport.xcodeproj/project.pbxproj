@@ -74,6 +74,8 @@
 		49988DA10F2F813000672AC4 /* TPRecentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49988DA00F2F813000672AC4 /* TPRecentCell.m */; };
 		49988DA50F2F81C400672AC4 /* TPRecentTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 49988DA40F2F81C400672AC4 /* TPRecentTrip.m */; };
 		49988DAF0F2F84BD00672AC4 /* TPRecentTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49988DAE0F2F84BD00672AC4 /* TPRecentTableController.m */; };
+		49988EE20F2FB53200672AC4 /* TPMeansTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49988EE10F2FB53200672AC4 /* TPMeansTableController.m */; };
+		49988F020F2FBAEE00672AC4 /* TPMean.m in Sources */ = {isa = PBXBuildFile; fileRef = 49988F010F2FBAEE00672AC4 /* TPMean.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -171,6 +173,10 @@
 		49988DA40F2F81C400672AC4 /* TPRecentTrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPRecentTrip.m; sourceTree = "<group>"; };
 		49988DAD0F2F84BD00672AC4 /* TPRecentTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPRecentTableController.h; sourceTree = "<group>"; };
 		49988DAE0F2F84BD00672AC4 /* TPRecentTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPRecentTableController.m; sourceTree = "<group>"; };
+		49988EE00F2FB53200672AC4 /* TPMeansTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMeansTableController.h; sourceTree = "<group>"; };
+		49988EE10F2FB53200672AC4 /* TPMeansTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMeansTableController.m; sourceTree = "<group>"; };
+		49988F000F2FBAEE00672AC4 /* TPMean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMean.h; sourceTree = "<group>"; };
+		49988F010F2FBAEE00672AC4 /* TPMean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMean.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -275,6 +281,8 @@
 				496433970F2D244E00F3348C /* TPFavorite.m */,
 				496433990F2D246000F3348C /* TPPlace.h */,
 				4964339A0F2D246000F3348C /* TPPlace.m */,
+				49988F000F2FBAEE00672AC4 /* TPMean.h */,
+				49988F010F2FBAEE00672AC4 /* TPMean.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -290,6 +298,7 @@
 				496430130F2CC8FB00F3348C /* TPTravelDateSelectorController.m */,
 				4964337D0F2D0F7700F3348C /* TPAutocompleteController.h */,
 				4964337E0F2D0F7700F3348C /* TPAutocompleteController.m */,
+				49988EE30F2FB53C00672AC4 /* Modal */,
 			);
 			name = "Entry Sub Controllers";
 			sourceTree = "<group>";
@@ -463,6 +472,15 @@
 			name = Recent;
 			sourceTree = "<group>";
 		};
+		49988EE30F2FB53C00672AC4 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				49988EE00F2FB53200672AC4 /* TPMeansTableController.h */,
+				49988EE10F2FB53200672AC4 /* TPMeansTableController.m */,
+			);
+			name = Modal;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -574,6 +592,8 @@
 				49988DA10F2F813000672AC4 /* TPRecentCell.m in Sources */,
 				49988DA50F2F81C400672AC4 /* TPRecentTrip.m in Sources */,
 				49988DAF0F2F84BD00672AC4 /* TPRecentTableController.m in Sources */,
+				49988EE20F2FB53200672AC4 /* TPMeansTableController.m in Sources */,
+				49988F020F2FBAEE00672AC4 /* TPMean.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

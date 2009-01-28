@@ -27,7 +27,7 @@
         stationBt.width = 40.0f;
         UIBarButtonItem *settingsBt = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"toolbarSettings.png"] style:UIBarButtonItemStylePlain target:self action:@selector(showSettingsModal)] autorelease];
         settingsBt.width = 40.0f;
-        UIBarButtonItem *addBt = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"toolbarAdd.png"] style:UIBarButtonItemStylePlain target:self action:@selector(showSettingsModal)] autorelease];
+        UIBarButtonItem *addBt = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"toolbarAdd.png"] style:UIBarButtonItemStylePlain target:self action:@selector(showAddActionSheet)] autorelease];
         addBt.width = 96.0f;
         [toolbar setItems:[NSArray arrayWithObjects:recentBt, favoriteBt,  addBt, stationBt, settingsBt, nil]];
         
@@ -82,6 +82,38 @@
     [self.navigationController dismissModalViewControllerAnimated:YES];
     [inputMaskController setCurrentTrip:trip];
 }
+
+- (void)showAddActionSheet {
+    UIActionSheet *addActionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                delegate:self 
+                       cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
+                  destructiveButtonTitle:nil
+                       otherButtonTitles:NSLocalizedString(@"Name your Location", nil), NSLocalizedString(@"Add to Favorites", nil), nil];
+    addActionSheet.tag = 1;
+    [addActionSheet showInView:self.view];
+    [addActionSheet release];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (actionSheet.tag == 1) {
+        if (buttonIndex == 0) {
+            UIAlertView *enterName = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Enter a Name", nil) message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", nil) otherButtonTitles:NSLocalizedString(@"Save", nil), nil];
+            [enterName addTextFieldWithValue:@"" label:@"Home, Work etc."];
+            enterName.tag = 1;
+            [enterName show];
+            [enterName release];
+        } else {
+            // TODO: Check and Write to Favorites
+        }
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (alertView.tag == 1) {
+        // TODO: Add to POIs
+    }
+}
+
 
 - (id)initWithFrom:(TPScheduleInput *)from to:(TPScheduleInput *)to date:(NSDate *)travelDate isDeparture:(BOOL)travelDateDeparture {
     if (self = [super init]) {

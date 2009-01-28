@@ -21,7 +21,12 @@
 #import "TPRecentTrip.h"
 #import "TPRecentTableController.h"
 
-@interface TPScheduleEntryController : UIViewController <TPSettingsControllerDelegate, TPFavoriteTableControllerDelegate, TPRecentTableControllerDelegate> {
+@interface UIAlertView ()
+- (void)addTextFieldWithValue:(NSString*)val label:(NSString*)label;
+- (UITextField*) textField;
+@end
+
+@interface TPScheduleEntryController : UIViewController <TPSettingsControllerDelegate, TPFavoriteTableControllerDelegate, TPRecentTableControllerDelegate, UIActionSheetDelegate> {
     TPScheduleMaskController *inputMaskController;
     TPQuickLookupController *quickLookupController;
     
