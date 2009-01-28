@@ -76,6 +76,7 @@
 		49988DAF0F2F84BD00672AC4 /* TPRecentTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49988DAE0F2F84BD00672AC4 /* TPRecentTableController.m */; };
 		49988EE20F2FB53200672AC4 /* TPMeansTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49988EE10F2FB53200672AC4 /* TPMeansTableController.m */; };
 		49988F020F2FBAEE00672AC4 /* TPMean.m in Sources */ = {isa = PBXBuildFile; fileRef = 49988F010F2FBAEE00672AC4 /* TPMean.m */; };
+		499890650F30749400672AC4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 499890640F30749400672AC4 /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -177,6 +178,7 @@
 		49988EE10F2FB53200672AC4 /* TPMeansTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMeansTableController.m; sourceTree = "<group>"; };
 		49988F000F2FBAEE00672AC4 /* TPMean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMean.h; sourceTree = "<group>"; };
 		49988F010F2FBAEE00672AC4 /* TPMean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMean.m; sourceTree = "<group>"; };
+		499890640F30749400672AC4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -245,6 +247,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				499890640F30749400672AC4 /* Icon.png */,
 				4972B4340F2E63F60070F3A5 /* tp.db */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -556,6 +559,7 @@
 				4964363F0F2D621B00F3348C /* toolbarAdd.png in Resources */,
 				4972B4350F2E63F60070F3A5 /* tp.db in Resources */,
 				49988CEB0F2F712500672AC4 /* favoriteArrow.png in Resources */,
+				499890650F30749400672AC4 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

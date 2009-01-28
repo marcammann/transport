@@ -69,7 +69,7 @@
 
     cell.font = [UIFont boldSystemFontOfSize:14.0];
     cell.text = element.stringRepresentation;
-    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
 
     return cell;
 }
@@ -88,6 +88,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [delegate autocompleteTableView:self didSelectItem:[currentEntries objectAtIndex:indexPath.row]];
 }
 

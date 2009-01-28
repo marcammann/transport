@@ -112,7 +112,9 @@
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
     
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.contentView.backgroundColor = [UIColor clearColor];
+    cell.backgroundColor = [UIColor clearColor];
+    //cell.selectionStyle = UITableViewCellSelectionStyleNone;
     // Set up the cell...
 
     return cell;
@@ -130,10 +132,11 @@
     } else {
         [currentMean replaceObjectAtIndex:0 withObject:[NSNumber numberWithBool:YES]];
     }
-    
+
     [settings.meansOfTransport replaceObjectAtIndex:indexPath.row withObject:currentMean];
     [settings saveToDefaults];
     [self.tableView reloadData];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 
